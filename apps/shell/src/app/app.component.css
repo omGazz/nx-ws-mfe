@@ -29,6 +29,11 @@ body {
     background-color: #f4f4f4;
 }
 
+.content-container {
+ padding-top: 105px;
+ padding-left: 305px;
+}
+
 .sidebar-links {
     list-style: none;
     padding: 0;

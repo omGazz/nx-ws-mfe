@@ -9,9 +9,9 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it(`should have as title 'shell'`, () => {
+  it(`should have as title 'users'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('shell');
+    expect(app.title).toEqual('users');
   });
 });

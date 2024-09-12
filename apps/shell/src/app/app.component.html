@@ -1,11 +1,8 @@
-<!-- <h1>App SHELL</h1>
-<a routerLink="mfe1">mfe1</a>
-<a routerLink="mfe2">mfe2</a>
-<a routerLink="mfe3">mfe3</a> -->
-
 <div class="header-container">
     <!-- Outlet for MFE1 (Header) -->
     <router-outlet name="header"></router-outlet>
+    <a routerLink="/users/list">users-list</a>
+    <a routerLink="/users/detail">users-Detail</a>
 </div>
 
 <div class="main-container">
@@ -16,7 +13,8 @@
 
     <div class="content-container">
         <!-- Default router-outlet for additional content -->
-        <!-- <router-outlet></router-outlet> -->
+        <!-- <router-outlet name="content"></router-outlet> -->
+        <router-outlet></router-outlet>
     </div>
 </div>
 

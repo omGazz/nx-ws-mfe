@@ -1,10 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule, RouterLink],
+  imports: [RouterModule, RouterLink],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -13,10 +12,9 @@ export class AppComponent implements OnInit {
   title = 'shell';
 
   router = inject(Router);
-
   ngOnInit() {
-    this.router.navigate([
-      { outlets: { header: ['mfe1'], sidebar: ['mfe2'], footer: ['mfe3'] } },
-    ]);
+    console.log('shell app initialized');
+    //this.router.navigate(['/users']);
+    //this.router.navigate([{ outlets: { content: ['users'] } }]);
   }
 }

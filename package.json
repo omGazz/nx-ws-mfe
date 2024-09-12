@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start-all": "nx run-many -t serve -p shell,mfe1,mfe2,mfe3",
-    "build-all": "nx run-many -t build -p shell,mfe1,mfe2,mfe3",
+    "start-all": "nx run-many -t serve -p shell,mfe1,mfe2,mfe3,users",
+    "build-all": "nx run-many -t build -p shell,mfe1,mfe2,mfe3,users",
     "start-shell": "nx serve shell",
     "start-mfe1": "nx serve mfe1",
     "start-mfe2": "nx serve mfe2",
