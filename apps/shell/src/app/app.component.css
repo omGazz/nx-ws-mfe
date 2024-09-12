@@ -1,0 +1,83 @@
+/* Reset margins and padding for the body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+.header-container {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Make sure the header is on top of the sidebar */
+    height: 60px;
+}
+
+/* Sidebar styles */
+.main-container {
+    display: flex;
+    margin-top: 60px; /* Push the main container down to compensate for fixed header */
+    height: calc(100vh - 60px); /* Ensure the sidebar takes the full height minus the header */
+}
+
+.sidebar-container {
+    width: 250px;
+    background-color: #444;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+}
+
+.content-container {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow: auto;
+}
+
+/* Sidebar menu links */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-links li {
+    margin-bottom: 15px;
+}
+
+.sidebar-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-links li a:hover {
+    background-color: #666;
+}
+
+/* Footer styles */
+.footer-container {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

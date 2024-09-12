@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
@@ -9,6 +9,14 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'shell';
+
+  router = inject(Router);
+
+  ngOnInit() {
+    this.router.navigate([
+      { outlets: { header: ['mfe1'], sidebar: ['mfe2'], footer: ['mfe3'] } },
+    ]);
+  }
 }
