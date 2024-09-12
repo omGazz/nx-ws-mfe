@@ -1,9 +1,9 @@
 {
-  "name": "shell",
+  "name": "mfe1",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/shell/src",
+  "sourceRoot": "apps/mfe1/src",
   "tags": [],
   "targets": {
     "build": {
@@ -11,10 +11,10 @@
       "options": {},
       "configurations": {
         "production": {
-          "target": "shell:esbuild:production"
+          "target": "mfe1:esbuild:production"
         },
         "development": {
-          "target": "shell:esbuild:development",
+          "target": "mfe1:esbuild:development",
           "dev": true
         }
       },
@@ -23,7 +23,7 @@
     "serve": {
       "executor": "@angular-architects/native-federation:build",
       "options": {
-        "target": "shell:serve-original:development",
+        "target": "mfe1:serve-original:development",
         "rebuildDelay": 0,
         "dev": true,
         "port": 0
@@ -32,7 +32,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "shell:build"
+        "buildTarget": "mfe1:build"
       }
     },
     "lint": {
@@ -44,15 +44,15 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "apps/shell/jest.config.ts"
+        "jestConfig": "apps/mfe1/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "shell:build",
+        "buildTarget": "mfe1:build",
         "port": 4200,
-        "staticFilePath": "dist/apps/shell/browser",
+        "staticFilePath": "dist/apps/mfe1/browser",
         "spa": true
       }
     },
@@ -62,23 +62,23 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/apps/shell",
-        "index": "apps/shell/src/index.html",
-        "browser": "apps/shell/src/main.ts",
+        "outputPath": "dist/apps/mfe1",
+        "index": "apps/mfe1/src/index.html",
+        "browser": "apps/mfe1/src/main.ts",
         "polyfills": [
           "zone.js",
           "es-module-shims"
         ],
-        "tsConfig": "apps/shell/tsconfig.app.json",
+        "tsConfig": "apps/mfe1/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/shell/public",
+            "input": "apps/mfe1/public",
             "output": "/public/"
           }
         ],
         "styles": [
-          "apps/shell/src/styles.css"
+          "apps/mfe1/src/styles.css"
         ],
         "scripts": []
       },
@@ -110,15 +110,15 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "shell:esbuild:production"
+          "buildTarget": "mfe1:esbuild:production"
         },
         "development": {
-          "buildTarget": "shell:esbuild:development"
+          "buildTarget": "mfe1:esbuild:development"
         }
       },
       "defaultConfiguration": "development",
       "options": {
-        "port": 4200
+        "port": 4201
       }
     }
   }

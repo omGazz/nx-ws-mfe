@@ -2,7 +2,9 @@
   "name": "@nx-ws/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start-all": "nx run-many -t serve -p shell,mfe1,mfe2,mfe3"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~18.2.0",
@@ -13,11 +15,13 @@
     "@angular/platform-browser": "~18.2.0",
     "@angular/platform-browser-dynamic": "~18.2.0",
     "@angular/router": "~18.2.0",
+    "es-module-shims": "^1.5.12",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
+    "@angular-architects/native-federation": "^18.2.2",
     "@angular-devkit/build-angular": "~18.2.0",
     "@angular-devkit/core": "~18.2.0",
     "@angular-devkit/schematics": "~18.2.0",

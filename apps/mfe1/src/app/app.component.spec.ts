@@ -10,9 +10,16 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it(`should have as title 'shell'`, () => {
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome mfe1');
+  });
+
+  it(`should have as title 'mfe1'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('shell');
+    expect(app.title).toEqual('mfe1');
   });
 });
