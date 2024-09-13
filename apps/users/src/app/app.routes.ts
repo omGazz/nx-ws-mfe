@@ -31,21 +31,26 @@ export const appRoutes: Route[] = [
     
   //  },
 
-  {
-    path: 'users',
-    //outlet: 'internal',
-    loadComponent: () =>
-      import('./app.component').then((m) => m.AppComponent),
+  // {
+  //   path: 'users',
+  //   //outlet: 'internal',
+  //   loadComponent: () =>
+  //     import('./app.component').then((m) => m.AppComponent),
+  // },
+    {
+    path: '',  // Home del microfrontend
+    redirectTo: 'list',
+    pathMatch: 'full',
   },
   {
-    path: 'users/list',
-    //outlet: 'internal',
+    path: 'list',
+    outlet: 'internal',
     loadComponent: () =>
       import('../pages/list/list.component').then((m) => m.ListComponent),
    },
   {
-    path: 'users/detail',
-    //outlet: 'internal',
+    path: 'detail',
+    outlet: 'internal',
     loadComponent: () =>
       import('../pages/detail/detail.component').then((m) => m.DetailComponent),
   },
