@@ -6,14 +6,14 @@ module.exports = withNativeFederation({
 
   exposes: {
     
-    //'./Component': './apps/users/src/app/app.component.ts',
+    './Component': './apps/users/src/app/app.component.ts',
     // It is possible to share routes 
     './routes': './apps/users/src/app/app.routes.ts',
   },
 
-  // shared: {
-  //   ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
-  // },
+  shared: {
+    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+  },
 
   skip: [
     'rxjs/ajax',

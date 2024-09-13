@@ -25,6 +25,11 @@ export const appRoutes: Route[] = [
     loadChildren: () =>
       loadRemoteModule('users', './routes').then((m) => m.appRoutes),
   },
+  // {
+  //   path: '',
+  //   loadComponent: () =>
+  //     loadRemoteModule('users', './Component').then((m) => m.AppComponent),
+  // },
     // {
     //   path: 'users',
     //   //outlet: 'content',
