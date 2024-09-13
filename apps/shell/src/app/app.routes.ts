@@ -4,11 +4,6 @@ import { Route } from '@angular/router';
 export const appRoutes: Route[] = [
   {
     path: '',
-    redirectTo: 'users', // Redirige alla route 'users' di default
-    pathMatch: 'full',
-  },
-  {
-    path: '',
     outlet: 'header',
     loadComponent: () =>
       loadRemoteModule('mfe1', './Component').then((m) => m.AppComponent),
@@ -25,20 +20,19 @@ export const appRoutes: Route[] = [
     loadComponent: () =>
       loadRemoteModule('mfe3', './Component').then((m) => m.AppComponent),
   },
-  // this will load the users app in the primary outlet
-  // {
-  //   path: '',
-  //   outlet: 'content',
-  //   loadComponent: () =>
-  //     loadRemoteModule('users', './Component').then((m) => m.AppComponent),
-  // },
-    // Route per caricare il microfrontend users nel primary outlet
-
-    {
-      path: 'users',
-      //outlet: 'content',
-      loadChildren: () =>
-        loadRemoteModule('users', './routes').then((m) => m.appRoutes),
-    },
-    // Route per gestire l'interno del microfrontend
+  {
+    path: '',
+    loadChildren: () =>
+      loadRemoteModule('users', './routes').then((m) => m.appRoutes),
+  },
+    // {
+    //   path: 'users',
+    //   //outlet: 'content',
+    //   loadComponent: () =>
+    //     loadRemoteModule('users', './Component').then((m) => m.AppComponent),
+    // },
+    // {
+    //   path: '**',  // Fallback route per qualsiasi altro percorso
+    //   redirectTo: 'users'
+    // },
 ];

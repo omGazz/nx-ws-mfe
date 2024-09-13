@@ -73,7 +73,8 @@
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/users/public"
+            "input": "apps/users/public",
+            "output": "public"
           }
         ],
         "styles": [

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -8,6 +8,10 @@ import { RouterLink, RouterModule } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'users';
+  router = inject(Router);
+  ngOnInit() {
+    console.log('AppComponent ngOnInit', this.router.routerState.snapshot.root);
+  }
 }

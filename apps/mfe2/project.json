@@ -73,7 +73,8 @@
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/mfe2/public"
+            "input": "apps/mfe2/public",
+            "output": "public"
           }
         ],
         "styles": [
