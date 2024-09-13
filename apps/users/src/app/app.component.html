@@ -1,13 +1,13 @@
-<div class="users">
-  <h1>USERS APP COMPONENT</h1>
+  <router-outlet></router-outlet>
+<!-- TODO: I am not satisfied with the way the microfrontend with routing is loaded.
 
-  <div>
-    <h1>Internal routing</h1>
-    <div class="btn-container">
-      <a routerLink="/detail">DETAIL FROM APP COMPONENT</a>
-      <a routerLink="/list">LIST FROM APP COMPONENT</a>
-    </div>
-  </div>
-  <!-- <router-outlet name="internal"></router-outlet> -->
-  <router-outlet ></router-outlet>
-</div>
+Since there is the bootstrap file (bootstrap.ts) that launches the appComponent I found no
+better way than to leave the appComponent only with the router-outlet and create a landing page 
+with the router links for navigation. If I had not done so the microfront end would have been seen nested in 
+as the appComponent is launched from the bootstrap and it loads back as the parent thereappComponent
+in the routing file. This way it is not important to have child routes but they can
+all be at the same level. By doing this what you see from the shell and what you see from this
+microfrontend is the same thing. Which is very important for the dev experience. In any case
+I am not satisfied and I put a TODO to try to improve this aspect.
+
+-->

@@ -1,3 +1,28 @@
-:host {
-  display: block;
+.btn-container {
+  display: flex; /* Disporre i link in orizzontale */
+  justify-content: space-around; /* Distribuire i link uniformemente */
+  background-color: #333; /* Sfondo scuro */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per dare profondità */
+}
+
+.btn-container a {
+  display: inline-block; /* Assicura che i link rimangano in linea */
+  padding: 15px 20px; /* Spazio interno ai link */
+  background-color: #444; /* Colore dei link leggermente più chiaro */
+  color: white;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-container a:hover {
+  background-color: #555; /* Cambia colore al passaggio del mouse */
+}
+
+.page {
+  border: 4px dotted red;
 }
