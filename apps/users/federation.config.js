@@ -13,6 +13,7 @@ module.exports = withNativeFederation({
 
   shared: {
     ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+    '@nx-ws/foo-library': { singleton: true, strictVersion: true },
   },
 
   skip: [

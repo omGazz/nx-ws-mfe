@@ -1,16 +1,16 @@
 .btn-container {
-  display: flex; /* Disporre i link in orizzontale */
-  justify-content: space-around; /* Distribuire i link uniformemente */
-  background-color: #333; /* Sfondo scuro */
+  display: flex; 
+  justify-content: space-around; 
+  background-color: #333; 
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per dare profondità */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .btn-container a {
-  display: inline-block; /* Assicura che i link rimangano in linea */
-  padding: 15px 20px; /* Spazio interno ai link */
-  background-color: #444; /* Colore dei link leggermente più chiaro */
+  display: inline-block; 
+  padding: 15px 20px; 
+  background-color: #444; 
   color: white;
   text-decoration: none;
   font-family: 'Arial', sans-serif;
@@ -20,9 +20,37 @@
 }
 
 .btn-container a:hover {
-  background-color: #555; /* Cambia colore al passaggio del mouse */
+  background-color: #555; 
 }
 
 .page {
   border: 4px dotted red;
+}
+
+.shared-data {
+  color: #FFFFFF;
+  background-color: red;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.change-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.stamp-button {
+  background-color: #444;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }

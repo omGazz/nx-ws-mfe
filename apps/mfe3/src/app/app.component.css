@@ -41,3 +41,11 @@ footer {
     color: #f4f4f4;
     text-decoration: underline;
 }
+
+.shared-data {
+    color: #FFFFFF;
+    background-color: red;
+    padding: 10px;
+    display: inline-flex;
+    border-radius: 5px;
+}

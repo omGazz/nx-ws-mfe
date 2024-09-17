@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FooService } from '@nx-sw/foo-library';
 
 @Component({
   standalone: true,
@@ -10,4 +11,6 @@ import { RouterModule } from '@angular/router';
 })
 export class AppComponent {
   title = 'mfe3';
+  fooService = inject(FooService);
+  data = this.fooService.fooDataSignal;
 }
