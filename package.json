@@ -5,11 +5,11 @@
   "scripts": {
     "start:all": "nx run-many --parallel --target=serve --projects=shell,mfe1,mfe2,mfe3,users --maxParallel=10",
     "build:all": "nx run-many -t build -p shell,mfe1,mfe2,mfe3,users --maxParallel=10",
-    "start-shell": "nx serve shell",
-    "start-mfe1": "nx serve mfe1",
-    "start-mfe2": "nx serve mfe2",
-    "start-mfe3": "nx serve mfe3",
-    "start-users": "nx serve users"
+    "start:shell": "nx serve shell",
+    "start:mfe1": "nx serve mfe1",
+    "start:mfe2": "nx serve mfe2",
+    "start:mfe3": "nx serve mfe3",
+    "start:users": "nx serve users"
   },
   "private": true,
   "dependencies": {

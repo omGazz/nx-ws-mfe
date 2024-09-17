@@ -2,10 +2,8 @@ import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  computed,
   inject,
   Signal,
-  signal,
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FooService } from '@nx-sw/foo-library';
