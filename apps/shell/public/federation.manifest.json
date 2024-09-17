@@ -2,5 +2,6 @@
 	"mfe1": "http://localhost:4201/remoteEntry.json",
 	"mfe2": "http://localhost:4202/remoteEntry.json",
 	"mfe3": "http://localhost:4203/remoteEntry.json",
-	"users": "http://localhost:4204/remoteEntry.json"
+	"users": "http://localhost:4204/remoteEntry.json",
+	"external-mfe": "http://localhost:4300/remoteEntry.json"
 }

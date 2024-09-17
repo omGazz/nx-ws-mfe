@@ -25,4 +25,15 @@ export const appRoutes: Route[] = [
     loadChildren: () =>
       loadRemoteModule('users', './routes').then((m) => m.appRoutes),
   },
+  /**this app is external from this monorepo */
+  {
+    path: '',
+    outlet: 'external-app',
+    loadComponent: () =>
+      loadRemoteModule('external-mfe', './Component').then((m) => m.AppComponent)
+    .catch(() => {
+      console.error('Error loading remote module: external-mfe');
+      return import('../components/error/error.component').then((m) => m.ErrorComponent);
+    }),
+  },
 ];

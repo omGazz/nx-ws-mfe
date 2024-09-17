@@ -34,7 +34,6 @@ import { FooService } from '@nx-sw/foo-library';
       </div>
       <p>Current shared data:</p>
       <div class="btn-container">
-
         <h3 class="shared-data">{{ mySharedData() }}</h3>
       </div>
     </div>

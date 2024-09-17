@@ -67,3 +67,11 @@ body {
     width: 100%;
     bottom: 0;
 }
+
+.external-app-container {
+    width: 300px;
+    position: absolute;
+    bottom: 120px;
+    z-index: 1;
+    right: 10px;
+}
