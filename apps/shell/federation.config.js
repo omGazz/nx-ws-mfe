@@ -1,10 +1,11 @@
 const { withNativeFederation, shareAll } = require('@angular-architects/native-federation/config');
 
 module.exports = withNativeFederation({
+  name: 'shell',
   /**I'm doing this to expose the FooService to external apps. That's not necessary if 
    * we have all the apps in the same monorepo. */
   exposes: {
-    './FooService': './libs/foo-library/src/lib/foo.service.ts',
+    './FooService': './libs/foo-library/src/index.ts',
   },
 
   shared: {

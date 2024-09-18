@@ -36,4 +36,5 @@ export const appRoutes: Route[] = [
       return import('../components/error/error.component').then((m) => m.ErrorComponent);
     }),
   },
+  
 ];
